@@ -5,6 +5,7 @@ fields:
 - type: text
   name: title
   label: title
+  description: Help text that appears above the field (it looks exactly like this).
 - type: datetime
   name: date
   label: date
