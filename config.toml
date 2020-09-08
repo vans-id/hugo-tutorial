@@ -1,0 +1,10 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Coba Hugo"
+theme = "evantheme"
+summaryLength = 12
+paginate = 2
+[permalinks]
+  blog = "/:year/:month/:title"
+[params]
+  Description = "coba SEO Hugo"

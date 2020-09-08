@@ -1,0 +1,15 @@
+<head>
+  <title>{{.Title}}</title>
+
+  {{ if eq .Kind "section" }}
+    <meta name='description' content="Ini adalah {{ .Summary }}"/>
+  {{ end }}
+
+  {{ if .Description }}
+    <meta name='description' content="{{ .Description }}"/>
+  {{ else }}
+    <meta name='description' content="{{ .Site.Params.Description }}"/>
+  {{ end }}
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+</head>

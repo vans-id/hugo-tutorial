@@ -1,0 +1,58 @@
+{{ define "main"}}
+  <h1>{{ .Title }}</h1>
+
+  <!-- <h2>Daftar konten</h2>
+  <ul>
+    {{ range .Site.RegularPages }}
+    <li>
+      <a href="{{ .Permalink }}">{{.Title}}</a>
+      <span>Dibuat pada {{ .Date.Format "2006-01-02" }}</span>
+    </li>
+    {{ end }}
+  </ul> -->
+
+  <h2>Daftar Blog</h2>
+  <ul>
+    <div class="row">
+      {{ range where .Site.RegularPages "Section" "blog" }}
+        <div class="col-md-6 col-lg-4">
+          <li>
+            <div class="card mt-2" style="height: 220px;">
+              <div class="card-body d-flex flex-column justify-content-between">
+                <div>
+                  <h5 class="card-title">
+                    <a href="{{ .Permalink }}">{{.Title}}</a>
+                  </h5>
+                  <p class="card-text">{{ .Summary }}</p>
+                </div>
+                <span class="card-subtitle text-muted">
+                  Dibuat pada {{ .Date.Format "2006-01-02" }}
+                </span>
+              </div>
+            </div>
+          </li>
+        </div>
+      {{ end }}
+    </div>
+  </ul>
+
+  <h2>Daftar Rekomendasi</h2>
+  <ul>
+    {{ range where .Site.RegularPages "Section" "recomendation" }}
+    <li>
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="{{ .Permalink }}">{{.Title}}</a>
+          </h5>
+          <span class="card-subtitle text-muted">
+            Dibuat pada {{ .Date.Format "2006-01-02" }}
+          </span>
+        </div>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+
+
+{{ end }}
