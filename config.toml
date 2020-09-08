@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://hugo-demo-lwsd.onrender.com/"
 languageCode = "en-us"
 title = "Coba Hugo"
 theme = "evantheme"
